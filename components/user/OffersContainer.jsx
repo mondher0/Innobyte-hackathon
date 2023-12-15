@@ -1,4 +1,7 @@
+"use client";
+import { useState } from "react";
 import SingleOfferCard from "../offers/SingleOfferCard";
+import PaginationContainer from "../ui/PaginationContainer";
 
 const OffersContainer = () => {
   // some offers to tst
@@ -26,15 +29,35 @@ const OffersContainer = () => {
       boJob: "CEO at Hotel",
     },
   ];
+  const totalPages = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+  const setPage = (page) => {
+    setCurrentPage(page);
+  };
+  const nextPage = () => {
+    setCurrentPage((prev) => prev + 1);
+  };
+  const prevPage = () => {
+    setCurrentPage((prev) => prev - 1);
+  };
   return (
-    <div className=" flex  justify-between flex-wrap gap-7 pb-10 pt-24 w-full    ">
-      {offers.map((offer, index) => (
-        <SingleOfferCard
-          key={index}
-          {...offer}
-        />
-      ))}
-    </div>
+    <section className=" flex flex-col items-center justify-center gap-10 ">
+      <div className=" flex  justify-between flex-wrap gap-7 pb-10 pt-24 w-full    ">
+        {offers.map((offer, index) => (
+          <SingleOfferCard
+            key={index}
+            {...offer}
+          />
+        ))}
+      </div>
+      <PaginationContainer
+        currentPage={currentPage}
+        totalPages={totalPages}
+        setPage={setPage}
+        nextPage={nextPage}
+        prevPage={prevPage}
+      />
+    </section>
   );
 };
 export default OffersContainer;
