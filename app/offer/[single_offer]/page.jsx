@@ -31,8 +31,8 @@ const SingleOfferPage = ({ params }) => {
   return (
     <>
       <Header />
-      <div className="flex   mt-8">
-        <div className="flex-col w-3/4  gap-10 border-solid border-grey200 border-2  rounded-sm ">
+      <div className="flex min-w-full   mt-8">
+        <div className="flex-col min-w-[75%]  gap-10 border-solid border-grey200 border-2  rounded-sm ">
           <OfferDescription
             description={offer?.description}
             title={offer?.title}
