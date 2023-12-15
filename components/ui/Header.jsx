@@ -22,7 +22,11 @@ const Header = () => {
       {/* this is the right section */}
       <div className="left-section flex items-center justify-between w-fit gap-20  ">
         <div className="logo-container flex items-center gap-5 ">
-          <Image src={"/Logo.svg"} width={130} height={30} />
+          <Image
+            src={"/Logo.svg"}
+            width={130}
+            height={30}
+          />
           <VersionBadge />
         </div>
         {/* this is the version */}
