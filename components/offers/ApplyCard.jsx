@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IoStarSharp } from "react-icons/io5";
-import { SlDislike } from "react-icons/sl";
+import ApplyModal from "./ApplyModal";
 
 const FlagIcon = () => {
   return (
@@ -39,33 +40,35 @@ const DislikeIcon = () => {
 
 const ApplyCard = () => {
   return (
-    <div className="flex flex-col items-start justify-center f gap-4 border-solid border-#6B7280 border-2 p-5">
-      <Button>Apply now</Button>
-      <Button className="flex items-center gap-2">
-        Save Project
-        <MdFavoriteBorder />
-      </Button>
-      <span className="flex items-center text-indigo-700">
-        <FlagIcon /> Flag as inappropriate
-      </span>
-      <p className="text-gray-700 font-bold">About the client</p>
-      <div className="flex items-center">
-        <IoStarSharp color="#F1C323" size={25} />
-        <IoStarSharp color="#F1C323" size={25} />
-        <IoStarSharp color="#F1C323" size={25} />
-        <IoStarSharp color="#F1C323" size={25} />
-      </div>
-      <p className="text-gray-500 font-medium">5.00 of 5 reviews</p>
-      <span className="mt-5">
-        <p className="text-gray-500">Alger, Algiers</p>
-        <p className="text-gray-500">12 Project Posted</p>
-        <p className="mt-5 text-gray-500">Member since 20 dec 2023 </p>
-        <span className="flex items-center text-gray-500 gap-3">
-          <DislikeIcon />
-          Dislike
+    <>
+      <div className="flex flex-col items-start justify-center f gap-4 border-solid border-#6B7280 border-2 p-5">
+        <ApplyModal />
+        <Button className="flex items-center gap-2 w-[200px]">
+          Save Project
+          <MdFavoriteBorder />
+        </Button>
+        <span className="flex items-center text-indigo-700">
+          <FlagIcon /> Flag as inappropriate
         </span>
-      </span>
-    </div>
+        <p className="text-gray-700 font-bold">About the client</p>
+        <div className="flex items-center">
+          <IoStarSharp color="#F1C323" size={25} />
+          <IoStarSharp color="#F1C323" size={25} />
+          <IoStarSharp color="#F1C323" size={25} />
+          <IoStarSharp color="#F1C323" size={25} />
+        </div>
+        <p className="text-gray-500 font-medium">5.00 of 5 reviews</p>
+        <span className="mt-5">
+          <p className="text-gray-500">Alger, Algiers</p>
+          <p className="text-gray-500">12 Project Posted</p>
+          <p className="mt-5 text-gray-500">Member since 20 dec 2023 </p>
+          <span className="flex items-center text-gray-500 gap-3">
+            <DislikeIcon />
+            Dislike
+          </span>
+        </span>
+      </div>
+    </>
   );
 };
 

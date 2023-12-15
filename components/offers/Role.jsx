@@ -17,7 +17,7 @@ const Role = () => {
         <li>Ensure cross-browser compatibility and optimize performance</li>
       </ul>
       <div className="flex items-center mt-4">
-        <p className="text-gray-700 font-[16px] font-bold ">Skills :</p>
+        <p className="text-gray-700 font-[16px] font-bold ">Skills : </p>
         <span className="text-gra">
           HTML, CSS, js(react), Material UI, Tailwind CSS, Responsive
           Design:Mobile-first approach
