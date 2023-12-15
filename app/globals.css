@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -73,4 +73,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.sora {
+  font-family: "Noto Sans Thai Looped", sans-serif;
+  font-family: "Sora", sans-serif;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+}
+.Container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 30px;
 }
