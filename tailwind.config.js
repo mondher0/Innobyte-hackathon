@@ -17,12 +17,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        indigo600: "#312E81",
+        indigo600: "#4F46E5",
         indigo50: "#EEF2FF",
         indigo900: "#312E81",
         indigo700: "#4338CA",
         grey200: "#E5E7EB",
         grey400: "#9CA3AF",
+        grey500: "#6B7280",
+
         grey600: "#4B5563",
         grey700: "#374151",
         border: "hsl(var(--border))",

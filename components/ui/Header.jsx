@@ -4,6 +4,8 @@ import VersionBadge from "./VersionBage";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import Link from "next/link";
 import IconProvider from "./IconProvider";
+
+import AccountDropDown from "../user/AccountDropDown";
 const Header = () => {
   const links = [
     {
@@ -38,12 +40,14 @@ const Header = () => {
         </ul>
       </div>
       {/*  this si the right section */}
-      <div className="right-section">
+      <div className="right-section flex items-center gap-6 ">
+        {/* if  the user is logged in */}
         <Link href={""}>
           <IconProvider>
             <MdOutlineNotificationsNone size={25} />
           </IconProvider>
         </Link>
+        <AccountDropDown />
       </div>
     </header>
   );
