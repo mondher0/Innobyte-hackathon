@@ -8,6 +8,7 @@ const buttonVariants = cva("inline-flex items-center justify-center whitespace-n
   variants: {
     variant: {
       default: "bg-indigo600 text-white text-sm hover:bg-indigo50 hover:text-indigo600 font-semibold",
+      soft: "hover:bg-indigo600 hover:text-white text-sm bg-indigo50 text-indigo600 font-semibold",
       outline: "bg-transparent border-solid border-2 border-indigo600 text-indigo600 hover:bg-indigo50 hover:text-indigo600 font-semibold text-sm ",
       disabled: " bg-grey200 text-grey-600 font-semibold text-sm   ",
     },

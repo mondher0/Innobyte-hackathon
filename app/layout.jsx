@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/Footer";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <StoreProvider>
           <div className="Container">{children}</div>
+          <Footer />
         </StoreProvider>
       </body>
     </html>
