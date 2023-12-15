@@ -7,8 +7,8 @@ const SingleOfferPage = ({ params }) => {
   return (
     <>
       <Header />
-      <div className="flex items-start justify-between m-8">
-        <div className="flex-col w-4/5 p-5 gap-10">
+      <div className="flex items-start justify-between mt-8">
+        <div className="flex-col w-4/5 p-7 gap-10 border-solid border-#6B7280 border-2 p-5">
           <OfferDescription />
           <Role />
           <Role />
