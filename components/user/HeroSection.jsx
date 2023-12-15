@@ -29,13 +29,13 @@ const HeroSection = () => {
         src={"/right_image.png"}
         width={150}
         height={100}
-        className=" absolute right-0 bottom-10  "
+        className=" absolute right-0  -z-2  bottom-10  "
       />
       <Image
         src={"/left_image.png"}
         width={130}
         height={200}
-        className=" absolute left-20 top-20 "
+        className=" absolute left-20 z-0 top-20 "
       />
     </main>
   );
