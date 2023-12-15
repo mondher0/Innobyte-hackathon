@@ -17,7 +17,7 @@ const AccountDropDown = ({ user_image }) => {
           <IoIosArrowDown size={15} />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 absolute z-50 -right-9 top-2 ">
+      <DropdownMenuContent className="w-56 bg-white absolute z-50 -right-9 top-2 ">
         <DropdownMenuLabel>
           <button className=" hover:text-indigo600 duration-300 text-indigo-900 ">Se Déconnecter</button>
         </DropdownMenuLabel>
