@@ -21,7 +21,10 @@ const HeroSection = () => {
           by <br /> brilliant{" "}
         </h1>
 
-        <h2 className=" text-grey500 text-center  ">You can Search For the type of projects that fits you, just type in the search bar</h2>
+        <h2 className=" text-grey500 text-center  ">
+          You can Search For the type of projects that fits you, just type in
+          the search bar
+        </h2>
         <UserSearchInput />
       </div>
       {/* those are the images */}
