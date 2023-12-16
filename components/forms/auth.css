@@ -1,0 +1,112 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+.login .login-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: solid 1px #dfe0eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 40px;
+  gap: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+form {
+  width: 100%;
+}
+.login p {
+  color: #202224;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  opacity: 0.699999988079071;
+}
+.login h2 {
+  color: #252733;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.3px;
+}
+.login form .form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.login form .form-control label {
+  color: #202224;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.login form .form-control .labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+/* .login form .form-control input {
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #252733;
+  background: #fcfdfe;
+  padding: 10px;
+} */
+input {
+  outline: none;
+}
+.login-btn {
+  background-color: var(--clr-primary-3);
+  color: white;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-top: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 1700px) {
+  .login p {
+    font-size: 25px;
+  }
+  .login h2 {
+    font-size: 30px;
+  }
+  .login form .form-control label {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .login form .form-control input {
+    width: 500px;
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .login-btn {
+    font-size: 25px;
+    padding: 20px;
+  }
+}
+.hover:hover {
+  cursor: pointer;
+}
