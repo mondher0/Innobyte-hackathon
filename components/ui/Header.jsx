@@ -6,8 +6,9 @@ import Link from "next/link";
 import IconProvider from "./IconProvider";
 
 import AccountDropDown from "../user/AccountDropDown";
+import { usePathname } from "next/navigation";
 const Header = () => {
-  const links = [
+  const loggedInLinks = [
     {
       text: "Collaboration Space",
       link: "",
@@ -17,6 +18,43 @@ const Header = () => {
       link: "",
     },
   ];
+  const notLoggedInLinks = [
+    {
+      text: "For Freelancers",
+      link: "",
+    },
+    {
+      text: "Support",
+      link: "",
+    },
+    {
+      text: "About",
+      link: "",
+    },
+  ];
+  const roomsLinks = [
+    {
+      text: "Home",
+      link: "/rooms",
+    },
+    {
+      text: "Support",
+      link: "",
+    },
+    {
+      text: "About",
+      link: "",
+    },
+  ];
+  let toShowLinks = "";
+  const path = usePathname();
+  if (path.includes("/rooms")) {
+    toShowLinks = roomsLinks;
+  } else if (path == "/") {
+    toShowLinks = notLoggedInLinks;
+  } else if (path.includes("/users") || path.includes("/offers")) {
+    toShowLinks = notLoggedInLinks;
+  }
   return (
     <header className=" flex items-center justify-between ">
       {/* this is the right section */}
@@ -31,7 +69,7 @@ const Header = () => {
         </div>
         {/* this is the version */}
         <ul className="links flex items-center gap-10 list-none">
-          {links.map((link, index) => (
+          {toShowLinks.map((link, index) => (
             <li key={index}>
               <Link
                 href={link.link}

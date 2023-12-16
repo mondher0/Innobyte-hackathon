@@ -1,6 +1,7 @@
 import Footer from "@/components/ui/Footer";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
+import Header from "@/components/ui/Header";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <StoreProvider>
-          <div className="Container">{children}</div>
+          <div className="Container">
+            <Header />
+
+            {children}
+          </div>
           <Footer />
         </StoreProvider>
       </body>
