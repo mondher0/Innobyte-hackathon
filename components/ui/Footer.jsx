@@ -1,4 +1,10 @@
+import Image from "next/image";
+
 const Footer = () => {
-  return <div className="min-w-screen bg-indigo900 py-20">Footer</div>;
+  return (
+    <div className="Container min-w-screen py-20 p-6">
+      <Image src="/logo.svg" width={200} height={200} />
+    </div>
+  );
 };
 export default Footer;
