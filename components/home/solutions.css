@@ -1,0 +1,7 @@
+.solutions-container {
+  contain: none !important;
+  isolation: isolate !important;
+}
+h1 {
+  font-size: 28px;
+}

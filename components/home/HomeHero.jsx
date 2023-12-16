@@ -30,7 +30,7 @@ const HomeHero = () => {
             <HeroCard image={"/ideat.svg"} text={"Ideate"} />
           </li>
           <li>
-            <HeroCard image={"/hire.svg"} text={"HireHire"} />
+            <HeroCard image={"/hire.svg"} text={"Hire"} />
           </li>
           <li>
             <HeroCard image={"/collaborate.svg"} text={"Collaborate"} />
