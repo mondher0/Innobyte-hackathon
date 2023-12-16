@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
 import "./auth.css";
 import FormControl from "./FormControl";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const LoginCard = () => {
+  const router = useRouter();
   return (
     <div className="login">
       <div className="login-card">
@@ -13,7 +16,13 @@ const LoginCard = () => {
           enter your infos to enter to your freelancer <br />
           account.
         </p>
-        <form className="mt-5">
+        <form
+          className="mt-5"
+          onSubmit={(e) => {
+            e.preventDefault();
+            router.push("/5");
+          }}
+        >
           <FormControl name="Adresse E-mail " type="email" />
           <FormControl name="Mot de Passe" type="password" />
 
@@ -34,6 +43,7 @@ const LoginCard = () => {
           <Button
             className="w-full mt-5 flex items-center gap-4 text-[#414141]"
             variant={"soft"}
+            type="submit"
           >
             <Image src="/google-icon.svg" width={20} height={20} />
             Connexion avec Google

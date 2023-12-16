@@ -19,7 +19,13 @@ const RegisterCard = () => {
           Enter the necessary info, and start your journey
           <br /> with us
         </p>
-        <form className="mt-5">
+        <form
+          className="mt-5"
+          onSubmit={(e) => {
+            e.preventDefault();
+            setStepTwo(true);
+          }}
+        >
           <p className="regiser-p">Account</p>
           <FormControl name="Adresse E-mail " type="email" casee="register" />
           <FormControl name="Mot de Passe" type="password" casee="register" />

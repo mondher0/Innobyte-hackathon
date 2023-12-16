@@ -20,7 +20,7 @@ const SolutionsSection = () => {
     },
   ];
   return (
-    <section className="solutions-container  bg-indigo900 py-4 p-10 mt-10 flex items-center relative">
+    <section className="solutions-container  bg-indigo900 py-8 p-10 mt-10 flex items-center relative">
       <div className="flex flex-col items-start justify-center gap-4">
         <Image src="/outline-logo.svg" width={100} height={100} />
         <h1 className="text-white font-semibold">
