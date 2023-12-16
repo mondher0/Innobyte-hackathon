@@ -7,14 +7,14 @@ import { Button } from "../ui/button";
 const ApplyModal = ({ open, onCLose }) => {
   return (
     <Dialog>
-      <DialogTrigger>
-        <Button className={"w-full "}>Apply Now</Button>
+      <DialogTrigger className=" w-full ">
+        <Button className={"w-full min-w-full  "}>Apply Now</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="mb-4">Apply for This Offer</DialogTitle>
           <DialogDescription>
-            <ApplyDropDown />
+            <ApplyDropDown className={"outline-none bg-red-500 "} />
             <Textarea></Textarea>
           </DialogDescription>
         </DialogHeader>
