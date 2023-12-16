@@ -32,7 +32,7 @@ const ApplyCard = ({ rating, totalReviews, city, since, numberOfProjects }) => {
       <span className="mt-5">
         <p className="text-gray-500">Alger, Algiers</p>
         <p className="text-gray-500">12 Project Posted</p>
-        <p className="mt-5 text-gray-500">Member since 20 dec 2023 </p>
+        <p className="mt-5 text-gray-500">{since}</p>
         <span className="flex items-center text-gray-500 gap-3">Dislike</span>
       </span>
     </div>
