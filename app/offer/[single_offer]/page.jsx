@@ -48,7 +48,13 @@ const SingleOfferPage = ({ params }) => {
             />
           ))}
         </div>
-        <ApplyCard />
+        <ApplyCard
+          rating={5}
+          totalReviews={50}
+          city="Algiers"
+          since="Member since 2020"
+          numberOfProjects={12}
+        />
       </div>
     </>
   );
