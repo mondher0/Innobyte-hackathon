@@ -30,7 +30,6 @@ const SingleOfferPage = ({ params }) => {
   ];
   return (
     <>
-      <Header />
       <div className="flex min-w-full   mt-8">
         <div className="flex-col min-w-[75%]  gap-10 border-solid border-grey200 border-2  rounded-sm ">
           <OfferDescription
@@ -48,7 +47,13 @@ const SingleOfferPage = ({ params }) => {
             />
           ))}
         </div>
-        <ApplyCard />
+        <ApplyCard
+          rating={5}
+          totalReviews={50}
+          city="Algiers"
+          since="Member since 2020"
+          numberOfProjects={12}
+        />
       </div>
     </>
   );

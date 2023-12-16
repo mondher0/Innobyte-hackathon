@@ -6,10 +6,12 @@ import Link from "next/link";
 import IconProvider from "./IconProvider";
 
 import AccountDropDown from "../user/AccountDropDown";
+
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { Button } from "./button";
+
 const Header = () => {
-  const links = [
+  const loggedInLinks = [
     {
       text: "Collaboration Space",
       link: "/productOwners/test/rooms?active_room=room1&active_section=statistics",
@@ -27,9 +29,49 @@ const Header = () => {
       link: "",
     },
   ];
+
+  const notLoggedInLinks = [
+    {
+      text: "For Freelancers",
+      link: "",
+    },
+    {
+      text: "Support",
+      link: "",
+    },
+    {
+      text: "About",
+      link: "",
+    },
+  ];
+  const roomsLinks = [
+    {
+      text: "Home",
+      link: "/rooms",
+    },
+    {
+      text: "Support",
+      link: "",
+    },
+    {
+      text: "About",
+      link: "",
+    },
+  ];
+  let toShowLinks = "";
+  const path = usePathname();
+  if (path.includes("/rooms")) {
+    toShowLinks = roomsLinks;
+  } else if (path.includes("/users") || path.includes("/offers")) {
+    toShowLinks = loggedInLinks;
+  } else {
+    toShowLinks = notLoggedInLinks;
+  }
+
   const pathName = usePathname();
   console.log(pathName);
   const router = useRouter();
+
   return (
     <header className=" flex items-center justify-between ">
       {/* this is the right section */}
@@ -46,13 +88,8 @@ const Header = () => {
         </div>
         {/* this is the version */}
         <ul className="links flex items-center gap-10 list-none">
-          {links.map((link, index) => (
-            <li key={index}>
-              {pathName === "/" &&
-              link.text === "Collaboration Space" ? null : (
-                <Link href={link.link}>{link.text}</Link>
-              )}
-            </li>
+          {toShowLinks.map((link, index) => (
+            <li key={index}>{pathName === "/" && link.text === "Collaboration Space" ? null : <Link href={link.link}>{link.text}</Link>}</li>
           ))}
         </ul>
       </div>

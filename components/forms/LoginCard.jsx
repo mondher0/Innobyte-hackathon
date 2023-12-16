@@ -20,14 +20,23 @@ const LoginCard = () => {
           className="mt-5"
           onSubmit={(e) => {
             e.preventDefault();
-            router.push("/5");
+            router.push("/users/5");
           }}
         >
-          <FormControl name="Adresse E-mail " type="email" />
-          <FormControl name="Mot de Passe" type="password" />
+          <FormControl
+            name="Adresse E-mail "
+            type="email"
+          />
+          <FormControl
+            name="Mot de Passe"
+            type="password"
+          />
 
           <div className="labels">
-            <label htmlFor="password" className="hover">
+            <label
+              htmlFor="password"
+              className="hover"
+            >
               Mot de passe oublié?
             </label>
           </div>
@@ -45,7 +54,11 @@ const LoginCard = () => {
             variant={"soft"}
             type="submit"
           >
-            <Image src="/google-icon.svg" width={20} height={20} />
+            <Image
+              src="/google-icon.svg"
+              width={20}
+              height={20}
+            />
             Connexion avec Google
           </Button>
         </form>

@@ -9,7 +9,6 @@ import React from "react";
 const HomePage = () => {
   return (
     <>
-      <Header />
       <HomeHero />
       <EcoSystemSection />
       <SolutionsSection />
