@@ -12,7 +12,7 @@ const Header = () => {
   const links = [
     {
       text: "Collaboration Space",
-      link: "/productOwners/test/rooms?active_room=room1&active_section=statistics",èkè
+      link: "/productOwners/test/rooms?active_room=room1&active_section=statistics",
     },
     {
       text: "Support",
