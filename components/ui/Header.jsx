@@ -50,9 +50,9 @@ const Header = () => {
   const path = usePathname();
   if (path.includes("/rooms")) {
     toShowLinks = roomsLinks;
-  } else if (path == "/") {
-    toShowLinks = notLoggedInLinks;
   } else if (path.includes("/users") || path.includes("/offers")) {
+    toShowLinks = loggedInLinks;
+  } else {
     toShowLinks = notLoggedInLinks;
   }
   return (

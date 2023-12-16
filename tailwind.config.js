@@ -16,6 +16,7 @@ module.exports = {
         indigo50: "#EEF2FF",
         indigo900: "#312E81",
         indigo700: "#4338CA",
+        grey100: "#F3F4F6",
         grey200: "#E5E7EB",
         grey400: "#9CA3AF",
         grey500: "#6B7280",
