@@ -14,6 +14,7 @@ and also to make their data secure and not be in other countries hands, with cha
 
 ## Technologies used
 - React
+- Next.js
 - Redux
 - Redux-thunk
 - React-router-dom
