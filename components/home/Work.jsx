@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Work = () => {
   return (
-    <div className="flex items-center justify-center gap-20 m-10">
+    <div className="flex items-center justify-center gap-20 m-40">
       <div className="flex flex-col items-start justify-center gap-4">
         <h1 className="font-bold ">
           Work in the best Projects
