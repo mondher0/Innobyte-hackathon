@@ -4,11 +4,30 @@ import { BiDislike } from "react-icons/bi";
 import IconProvider from "../ui/IconProvider";
 import { FaRegHeart } from "react-icons/fa6";
 import { Button } from "../ui/button";
-const SingleOfferCard = ({ postulationDate, title, description, positions, businessOwner, boJob, boImage, isLiked, isDisliked }) => {
+import { useRouter } from "next/navigation";
+const SingleOfferCard = ({
+  postulationDate,
+  title,
+  description,
+  positions,
+  businessOwner,
+  boJob,
+  boImage,
+  isLiked,
+  isDisliked,
+}) => {
+  const router = useRouter();
   return (
-    <article className=" border-solid border-[1px] border-grey400 w-full    max-w-[650px] rounded-md p-4 px-6    ">
-      <h5 className=" text-sm text-grey600  inter  font-semibold ">{postulationDate}</h5>
-      <h3 className=" text-xl mt-2 font-semibold inter   text-grey700">{title}</h3>
+    <article
+      className=" border-solid border-[1px] border-grey400 w-full    max-w-[650px] rounded-md p-4 px-6    "
+      onClick={() => router.push("/offer/1")}
+    >
+      <h5 className=" text-sm text-grey600  inter  font-semibold ">
+        {postulationDate}
+      </h5>
+      <h3 className=" text-xl mt-2 font-semibold inter   text-grey700">
+        {title}
+      </h3>
       <p className=" text-grey500 mt-4 text-sm  inter  ">{description}</p>
       {/* those are the needed positions */}
       <div className="needed-positions mt-5 flex flex-col gap-5 ">
@@ -37,8 +56,12 @@ const SingleOfferCard = ({ postulationDate, title, description, positions, busin
               className=" rounded-full "
             />
             <div className="info flex flex-col items-start justify-start ">
-              <span className=" text-grey900  font-semibold text-[15px]  ">{businessOwner}</span>
-              <span className=" text-grey400  font-medium   text-[12px]   ">{boJob}</span>
+              <span className=" text-grey900  font-semibold text-[15px]  ">
+                {businessOwner}
+              </span>
+              <span className=" text-grey400  font-medium   text-[12px]   ">
+                {boJob}
+              </span>
             </div>
           </div>
           {/* buttons  */}
